@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CorreJá - Corrida</title>
+
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+
+<body class="corrida-body">
+
+<div id="map"></div>
+
+<div class="map-overlay">
+
+    <div class="status">
+        🔴 Gravando
+    </div>
+
+    <div class="tempo-mapa" id="tempoMapa">
+        00:00:00
+    </div>
+
+</div>
+
+<div class="painel-corrida">
+
+    <div class="tempo-grande" id="tempo">
+        00:00:00
+    </div>
+
+    <div class="grid-corrida">
+
+        <div class="item">
+            <span>Distância</span>
+            <h2 id="distancia">0.00 km</h2>
+        </div>
+
+        <div class="item">
+            <span>Velocidade</span>
+            <h2 id="velocidade">0.0 km/h</h2>
+        </div>
+
+        <div class="item">
+            <span>Ritmo</span>
+            <h2 id="ritmo">0'00"/km</h2>
+        </div>
+
+        <div class="item">
+            <span>Calorias</span>
+            <h2 id="calorias">0 kcal</h2>
+        </div>
+
+    </div>
+
+    <button id="btnFinalizar">
+
+        ⏹ Finalizar Corrida
+
+    </button>
+
+</div>
+
+<script src="config.js"></script>
+<script src="api.js"></script>
+<script src="mapa.js"></script>
+<script src="script.js"></script>
+
+<script>
+
+iniciarCronometro();
+iniciarRota();
+
+</script>
+
+</body>
+</html>

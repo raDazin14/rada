@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CorreJá - Compartilhar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="compartilhar-body">
+
+<div class="compartilhar-topo">
+
+    <img src="logo.svg" alt="CorreJá" class="logo-marca">
+
+    <h1>Sua corrida</h1>
+
+    <p>Tire uma foto pra gerar o card</p>
+
+</div>
+
+<!-- CÂMERA AO VIVO -->
+<div class="camera-wrap" id="cameraWrap">
+
+    <video id="video" autoplay playsinline muted></video>
+
+    <button id="btnTrocarCamera" class="btn-trocar-camera" title="Trocar câmera">
+        🔄
+    </button>
+
+    <button id="btnCapturar" class="btn-shutter" title="Tirar foto">
+    </button>
+
+</div>
+
+<!-- AVISO QUANDO A CÂMERA NÃO FUNCIONA -->
+<div class="erro-camera" id="erroCamera">
+
+    <p>Não foi possível acessar a câmera. Verifique a permissão do navegador, ou escolha uma foto da galeria:</p>
+
+    <button id="btnGaleria" class="btn-primario">
+        🖼️ Escolher da galeria
+    </button>
+
+</div>
+
+<!-- PREVIEW DO CARD JÁ MONTADO -->
+<div class="card-preview-wrap" id="previewWrap">
+
+    <canvas id="canvas" width="1080" height="1350"></canvas>
+
+</div>
+
+<input
+    type="file"
+    id="inputFoto"
+    accept="image/*"
+    capture="environment"
+    style="display:none">
+
+<div class="compartilhar-acoes" id="acoesFinais">
+
+    <button id="btnBaixar" class="btn-primario">
+        ⬇️ Baixar imagem
+    </button>
+
+    <button id="btnCompartilhar" class="btn-primario">
+        📤 Compartilhar
+    </button>
+
+    <button id="btnRefazer" class="btn-secundario">
+        🔁 Tirar outra foto
+    </button>
+
+</div>
+
+<a href="index.html" class="link-pular">
+    Pular, ir para o início
+</a>
+
+<script src="compartilhar.js"></script>
+
+</body>
+</html>

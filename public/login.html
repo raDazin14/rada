@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CorreJá - Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="login-body">
+
+<div class="login-card">
+
+    <img src="logo.svg" alt="CorreJá" class="logo-marca">
+
+    <h1>CorreJá</h1>
+
+    <p>Seu parceiro de corrida.</p>
+
+    <input
+        id="email"
+        type="email"
+        placeholder="Seu e-mail">
+
+    <input
+        id="senha"
+        type="password"
+        placeholder="Sua senha">
+
+    <button onclick="login()">
+
+        Entrar
+
+    </button>
+
+    <a href="cadastro.html">
+
+        Criar conta
+
+    </a>
+
+</div>
+
+<script src="config.js"></script>
+<script src="auth.js"></script>
+
+<script>
+
+if(localStorage.getItem("usuario")){
+
+    window.location = "index.html";
+
+}
+
+</script>
+
+</body>
+</html>
